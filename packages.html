@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelrific - Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul li {
+            margin: 0 1rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav ul li a.active {
+            border-bottom: 2px solid #fff;
+        }
+
+        .hero-section {
+            background-image: url("packages1.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background-color: #ff6200;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .package-categories,
+        .featured-packages {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .package-categories h2,
+        .featured-packages h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-grid,
+        .package-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .category-item,
+        .package-item {
+            flex-basis: calc(33.333% - 2rem);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .category-item img,
+        .package-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .category-item h3,
+        .package-item h3 {
+            font-size: 1.5rem;
+            margin: 1rem;
+        }
+
+        .package-item p {
+            font-size: 1.2rem;
+            margin: 1rem;
+        }
+
+        .view-details {
+            display: block;
+            text-align: center;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #ff6200;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Custom styles for active nav link */
+        .navbar-nav .nav-link.active 
+        {
+            color: #fff; /* Ensures text color is white */
+            border-bottom: 2px solid #fff; /* White border */
+        }
+
+        /* Custom styles for navbar-toggler (hamburger menu) */
+        .navbar-toggler 
+        {
+            border: 1px solid #fff; /* White border for the toggle button */
+        } 
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="plane.jpg" alt="Travelrific Logo" width="50" height="30" class="d-inline-block align-text-top">
+                Travelrific
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Customer Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portal.html">Customer Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Explore Our Tour Packages</h1>
+            <p>Your adventure begins here. Discover the world with our expertly curated packages.</p>
+            <a href="#packages" class="cta-button">Browse Packages</a>
+        </div>
+    </section>
+
+    <!-- Package Categories Section -->
+    <section class="package-categories" id="packages">
+        <h2>Tour Package Categories</h2>
+        <div class="category-grid">
+            <div class="category-item">
+                <img src="venice.jpg" alt="Venice Tours">
+                <h3>Venice Tours</h3>
+                <p>Experience the wonders of Venice.</p>
+                <p>10 days & 10 nights with food.</p>
+                <p>$20,000</p>
+                <a href="#" class="view-details" data-bs-toggle="modal" data-bs-target="#modalVenice">View Details</a>
+            </div>
+
+            <div class="category-item">
+                <img src="switzerland.jpg" alt="Switzerland Tours">
+                <h3>Switzerland Tours</h3>
+                <p>Discover the beauty of Switzerland.</p>
+                <p>10 days & 10 nights with food.</p>
+                <p>$25,000</p>
+                <a href="#" class="view-details" data-bs-toggle="modal" data-bs-target="#modalSwitzerland">View Details</a>
+            </div>
+
+            <div class="category-item">
+                <img src="africa.jpg" alt="Africa Tours">
+                <h3>Africa Tours</h3>
+                <p>Embrace the rhythm of Africa.</p>
+                <p>10 days & 10 nights with food.</p>
+                <p>$22,500</p>
+                <a href="#" class="view-details" data-bs-toggle="modal" data-bs-target="#modalAfrica">View Details</a>
+            </div>
+
+            <div class="category-item">
+                <img src="rajasthan.jpg" alt="Rajasthan Tours">
+                <h3>Rajasthan Tours</h3>
+                <p>Witness the heritage of Rajasthan</p>
+                <p>10 days & 10 nights with food.</p>
+                <p>$26,000</p>
+                <a href="#" class="view-details" data-bs-toggle="modal" data-bs-target="#modalRajasthan">View Details</a>
+            </div>
+
+            <div class="category-item">
+                <img src="bali2.jpg" alt="Bali Tours">
+                <h3>Bali Tours</h3>
+                <p>Get lost in the beaches of Bali</p>
+                <p>10 days & 10 nights with food.</p>
+                <p>$15,000</p>
+                <a href="#" class="view-details" data-bs-toggle="modal" data-bs-target="#modalBali">View Details</a>
+            </div>
+
+            <div class="category-item">
+                <img src="london.jpg" alt="London Tours">
+                <h3>London Tours</h3>
+                <p>Escape into the beauty of London</p>
+                <p>10 days & 10 nights with food.</p>
+                <p>$28,000</p>
+                <a href="#" class="view-details" data-bs-toggle="modal" data-bs-target="#modalLondon">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Each Tour Package -->
+    <!-- Modal for Venice Tours -->
+    <div class="modal fade" id="modalVenice" tabindex="-1" aria-labelledby="modalVeniceLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalVeniceLabel">Venice Tours</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Experience the wonders of Venice with our 10-day, 10-night tour. Enjoy guided tours, local cuisine, and more.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Switzerland Tours -->
+    <div class="modal fade" id="modalSwitzerland" tabindex="-1" aria-labelledby="modalSwitzerlandLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSwitzerlandLabel">Switzerland Tours</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Discover the beauty of Switzerland with our 10-day, 10-night tour. Experience the Alps, Swiss cities, and local culture.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Africa Tours -->
+    <div class="modal fade" id="modalAfrica" tabindex="-1" aria-labelledby="modalAfricaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAfricaLabel">Africa Tours</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Embrace the rhythm of Africa with our 10-day, 10-night tour. Enjoy safaris, cultural experiences, and stunning landscapes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Rajasthan Tours -->
+    <div class="modal fade" id="modalRajasthan" tabindex="-1" aria-labelledby="modalRajasthanLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRajasthanLabel">Rajasthan Tours</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Witness the heritage of Rajasthan with our 10-day, 10-night tour. Explore palaces, forts, and experience local traditions.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Bali Tours -->
+    <div class="modal fade" id="modalBali" tabindex="-1" aria-labelledby="modalBaliLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBaliLabel">Bali Tours</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Get lost in the beaches of Bali with our 10-day, 10-night tour. Enjoy pristine beaches, local culture, and more.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for London Tours -->
+    <div class="modal fade" id="modalLondon" tabindex="-1" aria-labelledby="modalLondonLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLondonLabel">London Tours</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Escape into the beauty of London with our 10-day, 10-night tour. Explore historic landmarks, museums, and enjoy the city's vibrant culture.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Travelrific. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

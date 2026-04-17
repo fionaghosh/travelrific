@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelrific</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        .hero-section 
+        {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Ensures text is readable if the background image is dark */
+            background-color: beige;
+        }
+
+        /* Hero Carousel Styling */
+        .carousel-item {
+            height: 300px;
+            overflow: hidden;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Custom styles for active nav link */
+        .navbar-nav .nav-link.active 
+        {
+            color: #fff; /* Ensures text color is white */
+            border-bottom: 2px solid #fff; /* White border */
+        }
+
+        /* Custom styles for navbar-toggler (hamburger menu) */
+        .navbar-toggler 
+        {
+            border: 1px solid #fff; /* White border for the toggle button */
+        } 
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="plane.jpg" alt="Travelrific Logo" width="50" height="30" class="d-inline-block align-text-top">
+                Travelrific
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Customer Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portal.html">Customer Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Hero Carousel Section-->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="travel1.jpg" class="d-block w-100" alt="Carousel Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="travel2.jpg" class="d-block w-100" alt="Carousel Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="travel3.jpg" class="d-block w-100" alt="Carousel Image 3">
+            </div>
+        </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section bg-dark text-white text-center py-1">
+        <h2>Expanding Horizons One Trip At A Time</h2>
+    </div>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="py-5">
+        <div class="container text-center">
+            <h2>Discover the World with Us</h2>
+            <p>Welcome to <strong>Travelrific</strong>, your trusted partner in crafting unforgettable travel experiences. Whether you're seeking a tranquil retreat, a thrilling adventure, or an immersive cultural journey, we're here to turn your travel dreams into reality. Explore, discover, and connect with the world's most breathtaking destinations—one extraordinary journey at a time. Let's start your adventure today!</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Tourism Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

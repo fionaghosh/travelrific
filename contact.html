@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Travelrific</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom styling for the contact page */
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            margin-right: 15px;
+            color: #007bff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #0056b3;
+        }
+        .form-feedback {
+            margin-top: 5px;
+            font-size: 0.875em;
+        }
+        .form-feedback.invalid {
+            color: red;
+        }
+        .form-feedback.valid {
+            color: green;
+        }
+
+        /* Custom styles for active nav link */
+        .navbar-nav .nav-link.active 
+        {
+            color: #fff; /* Ensures text color is white */
+            border-bottom: 2px solid #fff; /* White border */
+        }
+
+        /* Custom styles for navbar-toggler (hamburger menu) */
+        .navbar-toggler 
+        {
+            border: 1px solid #fff; /* White border for the toggle button */
+        } 
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="plane.jpg" alt="Travelrific Logo" width="50" height="30" class="d-inline-block align-text-top">
+                Travelrific
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Customer Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portal.html">Customer Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Information Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Phone Number:</strong> +61 402287196</p>
+                    <p><strong>Email Address:</strong> info@travelrific.com</p>
+                    <p><strong>Reservations:</strong> reservations@travelrific.com</p>
+                    <p><strong>Support:</strong> support@travelrific.com</p>
+                    <p><strong>Office Address:</strong> 123 Travelrific Lane, Suite 100, Tourism City, VIC 3390</p>
+                    <p><strong>Business Hours:</strong> Monday - Friday: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="col-lg-6">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        <div id="nameFeedback" class="form-feedback"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        <div id="emailFeedback" class="form-feedback"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number (Optional)</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number">
+                        <div id="phoneFeedback" class="form-feedback"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject or Inquiry Type</label>
+                        <select class="form-select" id="subject" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="booking">Booking Assistance</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnerships">Partnerships</option>
+                        </select>
+                        <div id="subjectFeedback" class="form-feedback"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <div id="messageFeedback" class="form-feedback"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social Media Links Section -->
+        <div class="row mt-5">
+            <div class="col text-center">
+                <h3>Connect with Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Signup Section (Optional) -->
+        <div class="row mt-5">
+            <div class="col text-center">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form class="d-inline-flex justify-content-center">
+                    <input type="email" class="form-control me-2" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Travelrific. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+
+                let isValid = true;
+
+                // Validate Name
+                const name = document.getElementById('name');
+                const nameFeedback = document.getElementById('nameFeedback');
+                if (name.value.trim() === '') {
+                    nameFeedback.textContent = 'Name is required.';
+                    nameFeedback.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    nameFeedback.textContent = 'Looks good!';
+                    nameFeedback.classList.add('valid');
+                    nameFeedback.classList.remove('invalid');
+                }
+
+                // Validate Email
+                const email = document.getElementById('email');
+                const emailFeedback = document.getElementById('emailFeedback');
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email.value.trim())) {
+                    emailFeedback.textContent = 'Please enter a valid email address.';
+                    emailFeedback.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    emailFeedback.textContent = 'Looks good!';
+                    emailFeedback.classList.add('valid');
+                    emailFeedback.classList.remove('invalid');
+                }
+
+                // Validate Phone
+                const phone = document.getElementById('phone');
+                const phoneFeedback = document.getElementById('phoneFeedback');
+                if (phone.value.trim() && !/^\d{10}$/.test(phone.value.trim())) {
+                    phoneFeedback.textContent = 'Phone number should be 10 digits.';
+                    phoneFeedback.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    phoneFeedback.textContent = 'Looks good!';
+                    phoneFeedback.classList.add('valid');
+                    phoneFeedback.classList.remove('invalid');
+                }
+
+                // Validate Subject
+                const subject = document.getElementById('subject');
+                const subjectFeedback = document.getElementById('subjectFeedback');
+                if (subject.value.trim() === '') {
+                    subjectFeedback.textContent = 'Please select a subject.';
+                    subjectFeedback.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    subjectFeedback.textContent = 'Looks good!';
+                    subjectFeedback.classList.add('valid');
+                    subjectFeedback.classList.remove('invalid');
+                }
+
+                // Validate Message
+                const message = document.getElementById('message');
+                const messageFeedback = document.getElementById('messageFeedback');
+                if (message.value.trim() === '') {
+                    messageFeedback.textContent = 'Message is required.';
+                    messageFeedback.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    messageFeedback.textContent = 'Looks good!';
+                    messageFeedback.classList.add('valid');
+                    messageFeedback.classList.remove('invalid');
+                }
+
+                if (isValid) {
+                    form.submit(); // Submit the form if valid
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

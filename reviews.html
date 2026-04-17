@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - Travelrific</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black;
+            background-color: beige;
+        }
+
+        .featured-review {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .review-category {
+            margin-bottom: 30px;
+        }
+
+        .review-rating {
+            color: #ffc107;
+        }
+
+        .testimonial {
+            font-style: italic;
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .form-feedback {
+            margin-left: 10px;
+            font-size: 0.875em;
+        }
+
+        .invalid {
+            color: red;
+        }
+
+        .valid {
+            color: green;
+        }
+
+        /* Custom styles for active nav link */
+        .navbar-nav .nav-link.active {
+            color: #fff; /* Ensures text color is white */
+            border-bottom: 2px solid #fff; /* White border */
+        }
+
+        /* Custom styles for navbar-toggler (hamburger menu) */
+        .navbar-toggler {
+            border: 1px solid #fff; /* White border for the toggle button */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="plane.jpg" alt="Travelrific Logo" width="50" height="30" class="d-inline-block align-text-top">
+                Travelrific
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Customer Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portal.html">Customer Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section background-color-white text-black text-center py-1">
+        <h1>Customer Reviews</h1>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="container my-5">
+        <p class="text-center">At Travelrific, our customers' experiences are at the heart of everything we do. We take pride in crafting memorable journeys, and we love hearing from those who have traveled with us. Here's what some of our happy travelers have to say.</p>
+    </div>
+
+    <!-- Featured Reviews Section -->
+    <div class="container">
+        <h2>Featured Reviews</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="featured-review" data-bs-toggle="modal" data-bs-target="#modalJaneD">
+                    <img src="bali.jpg" alt="Jane D." class="img-fluid mb-3" width="400">
+                    <h4>Jane D. from New York</h4>
+                    <p class="testimonial">"Our friends reunion in Bali was absolutely magical, thanks to Travelrific. Every detail was perfect, from the villa to the personalized tours. We can’t wait to plan our next adventure with you!"</p>
+                    <div class="review-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="featured-review" data-bs-toggle="modal" data-bs-target="#modalJohnS">
+                    <img src="family.jpg" alt="John S." class="img-fluid mb-3" width="300">
+                    <h4>John S. from California</h4>
+                    <p class="testimonial">"Travelrific organized the best family vacation we’ve ever had. The kids loved every moment, and we felt so well taken care of. Highly recommend!"</p>
+                    <div class="review-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Submission Form -->
+    <div class="container my-5">
+        <h2>Submit Your Review</h2>
+        <form id="reviewForm" novalidate>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                <div id="nameFeedback" class="form-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address (Optional)</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                <div id="emailFeedback" class="form-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <select class="form-select" id="rating" required>
+                    <option selected disabled value="">Choose a rating...</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <div id="ratingFeedback" class="form-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label for="review" class="form-label">Review</label>
+                <textarea class="form-control" id="review" rows="5" placeholder="Your Review" required></textarea>
+                <div id="reviewFeedback" class="form-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Upload Photos (Optional)</label>
+                <input type="file" class="form-control" id="photo" accept="image/*" multiple>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+    </div>
+
+    <!-- Review Categories Section -->
+    <div class="container my-5">
+        <h2>Explore Reviews by Category</h2>
+        <div class="row review-category">
+            <div class="col-md-4">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#">Bali</a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">Sydney</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Types of Travel</h4>
+                <ul>
+                    <li><a href="#">Family Vacations</a></li>
+                    <li><a href="#">Solo Adventures</a></li>
+                    <li><a href="#">Romantic Getaways</a></li>
+                    <li><a href="#">Business Trips</a></li>
+                    <li><a href="#">Group Travel</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Travel Seasons</h4>
+                <ul>
+                    <li><a href="#">Summer Escapes</a></li>
+                    <li><a href="#">Winter Wonderland</a></li>
+                    <li><a href="#">Spring Blossoms</a></li>
+                    <li><a href="#">Autumn Adventures</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Travelrific. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Modal for Jane D. -->
+    <div class="modal fade" id="modalJaneD" tabindex="-1" aria-labelledby="modalJaneDLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalJaneDLabel">Jane D. from New York</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="bali.jpg" alt="Jane D." class="img-fluid mb-3" width="400">
+                    <p class="testimonial">"Our friends reunion in Bali was absolutely magical, thanks to Travelrific. Every detail was perfect, from the villa to the personalized tours. We can’t wait to plan our next adventure with you!"</p>
+                    <div class="review-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for John S. -->
+    <div class="modal fade" id="modalJohnS" tabindex="-1" aria-labelledby="modalJohnSLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalJohnSLabel">John S. from California</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="family.jpg" alt="John S." class="img-fluid mb-3" width="300">
+                    <p class="testimonial">"Travelrific organized the best family vacation we’ve ever had. The kids loved every moment, and we felt so well taken care of. Highly recommend!"</p>
+                    <div class="review-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let valid = true;
+
+            // Name validation
+            const nameInput = document.getElementById('name');
+            const nameFeedback = document.getElementById('nameFeedback');
+            if (nameInput.value.trim() === '') {
+                nameFeedback.textContent = 'Please enter your name.';
+                nameFeedback.classList.add('invalid');
+                nameFeedback.classList.remove('valid');
+                valid = false;
+            } else {
+                nameFeedback.textContent = 'Looks good!';
+                nameFeedback.classList.remove('invalid');
+                nameFeedback.classList.add('valid');
+            }
+
+            // Email validation
+            const emailInput = document.getElementById('email');
+            const emailFeedback = document.getElementById('emailFeedback');
+            if (emailInput.value && !/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+                emailFeedback.textContent = 'Please enter a valid email address.';
+                emailFeedback.classList.add('invalid');
+                emailFeedback.classList.remove('valid');
+                valid = false;
+            } else if (emailInput.value) {
+                emailFeedback.textContent = 'Looks good!';
+                emailFeedback.classList.remove('invalid');
+                emailFeedback.classList.add('valid');
+            } else {
+                emailFeedback.textContent = ''; // Clear feedback if email is not entered
+            }
+
+            // Rating validation
+            const ratingInput = document.getElementById('rating');
+            const ratingFeedback = document.getElementById('ratingFeedback');
+            if (!ratingInput.value) {
+                ratingFeedback.textContent = 'Please choose a rating.';
+                ratingFeedback.classList.add('invalid');
+                ratingFeedback.classList.remove('valid');
+                valid = false;
+            } else {
+                ratingFeedback.textContent = 'Looks good!';
+                ratingFeedback.classList.remove('invalid');
+                ratingFeedback.classList.add('valid');
+            }
+
+            // Review validation
+            const reviewInput = document.getElementById('review');
+            const reviewFeedback = document.getElementById('reviewFeedback');
+            if (reviewInput.value.trim() === '') {
+                reviewFeedback.textContent = 'Please write a review.';
+                reviewFeedback.classList.add('invalid');
+                reviewFeedback.classList.remove('valid');
+                valid = false;
+            } else {
+                reviewFeedback.textContent = 'Looks good!';
+                reviewFeedback.classList.remove('invalid');
+                reviewFeedback.classList.add('valid');
+            }
+
+            // If valid, submit the form
+            if (valid) {
+                this.submit();
+            }
+        });
+    </script>
+</body>
+</html>
+

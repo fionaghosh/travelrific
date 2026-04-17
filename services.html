@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelrific</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+    <style>
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black; /* Ensures text is readable if the background image is dark */
+            background-color: beige;
+        }
+
+        /* Custom styles for active nav link */
+        .navbar-nav .nav-link.active {
+            color: #fff; /* Ensures text color is white */
+            border-bottom: 2px solid #fff; /* White border */
+        }
+
+        /* Custom styles for navbar-toggler (hamburger menu) */
+        .navbar-toggler {
+            border: 1px solid #fff; /* White border for the toggle button */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="plane.jpg" alt="Travelrific Logo" width="50" height="30" class="d-inline-block align-text-top">
+                Travelrific
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Customer Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portal.html">Customer Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center py-5">
+        <h1>Our Services</h1>
+    </div>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="py-5">
+        <div class="container text-center">
+            <p>At <strong>Travelrific</strong>, we offer a wide range of travel services designed to meet the diverse needs and desires of our travelers. Whether you're a solo adventurer, a couple seeking romance, a family on vacation, or a group of friends exploring together, we have something special for everyone.</p>
+        </div>
+    </section>
+
+    <!-- Who Are We Section -->
+    <section id="Who" class="py-5">
+        <div class="container text-center">
+            <h3>1. Custom Itinerary Planning</h3>
+            <p>We believe that every journey should be as unique as the traveler. Our expert travel planners work closely with you to design a personalized itinerary that reflects your interests, preferences, and pace. From must-see landmarks to hidden gems, we'll craft a trip that’s perfectly tailored to you.</p>
+
+            <h3>2. Guided Tours</h3>
+            <p>Experience your destination like a local with our expertly guided tours. Our knowledgeable guides bring destinations to life with fascinating stories, cultural insights, and insider tips. Choose from group tours, private tours, or specialized theme tours to suit your interests.</p>
+
+            <h3>3. Accommodation Booking</h3>
+            <p>Finding the perfect place to stay is crucial for a great travel experience. We offer a curated selection of accommodations, from luxury resorts and boutique hotels to charming guesthouses and eco-friendly lodges. We ensure comfort, convenience, and style, wherever your journey takes you.</p>
+
+            <h3>4. Transportation Arrangements</h3>
+            <p>Travel hassle-free with our comprehensive transportation services. We handle everything from airport transfers and car rentals to train tickets and domestic flights, ensuring that your journey is smooth and stress-free from start to finish.</p>
+
+            <h3>5. Adventure and Activity Planning</h3>
+            <p>For the thrill-seekers, we organize a wide range of adventure activities—from hiking and biking to water sports and wildlife safaris. Let us know your adventure appetite, and we’ll arrange experiences that get your adrenaline pumping.</p>
+
+            <h3>6. Cultural and Culinary Experiences</h3>
+            <p>Dive deep into the heart of your destination with our cultural and culinary experiences. Whether it’s a cooking class, wine tasting, local market tour, or a traditional dance performance, we connect you with authentic experiences that showcase the rich heritage and flavors of the places you visit.</p>
+
+            <h3>7. Corporate and Group Travel</h3>
+            <p>Planning a business trip, corporate retreat, or group getaway? We offer specialized services for corporate and group travel, including team-building activities, conference planning, and group tours. Let us handle the logistics, so you can focus on your goals and enjoy the journey.</p>
+
+            <h3>8. Romantic Getaways</h3>
+            <p>Celebrate love with our romantic getaways and honeymoons, designed to create magical memories for you and your partner. From secluded beach resorts to intimate city escapes, we plan every detail to ensure your trip is as special as your love story.</p>
+
+            <h3>9. Family Vacations</h3>
+            <p>Create lasting memories with our family-friendly vacations. We offer child-friendly accommodations, activities, and tours that cater to all ages, ensuring a fun and stress-free experience for everyone in the family.</p>
+
+            <h3>10. Eco-Tourism and Sustainable Travel</h3>
+            <p>Travel responsibly with our eco-tourism and sustainable travel options. We partner with environmentally conscious accommodations and tour operators to offer experiences that protect the environment, support local communities, and promote sustainable practices.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Travelrific. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
